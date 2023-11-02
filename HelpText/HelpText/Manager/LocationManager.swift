@@ -30,10 +30,10 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
     // locationManager -> fetchUserLocation 🔴
     func fetchUserLocation(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let geocoder = CLGeocoder()
+        let geocoder = CLGeocoder() // 위치 정보를 주소로 변환
         
         if let location = locations.last {
-            geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+            geocoder.reverseGeocodeLocation(location) { (placemarks, error) in // 현재 위치 정보를 주소로 변환하고, 주소 정보를 placemarks에 저장
                 if let error = error {
                     print("Reverse geocoding error: \(error.localizedDescription)")
                     return
@@ -58,7 +58,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
                         address = "\(address) \(subThoroughfare)"
                     }
                     
-                    self.currentLocation = address
+                    self.currentLocation = address // 주소 정보를 currentLocation 속성에 할당
                 }
             }
         }
@@ -66,3 +66,6 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
     }
     
 }
+
+// LocationManager 클래스가 사용자의 현재 위치를 가져오고 주소로 변환하여
+// @Published 속성을 통해 SwiftUI 뷰에 현재 위치를 표시하는 데 사용됩니다.
