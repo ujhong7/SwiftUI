@@ -33,8 +33,8 @@ struct HomeView: View {
             }
             .padding(.all, 30)
             VStack(spacing: 20) {
-                HomeSection1View()
-                HomeSection2View()
+                HomeSection1View(contactViewModel: contactViewModel, textMessageViewModel: textMessageViewModel)
+                HomeSection2View(contactViewModel: contactViewModel, textMessageViewModel: textMessageViewModel)
             }
         }
         .background(Color(.systemBackground))

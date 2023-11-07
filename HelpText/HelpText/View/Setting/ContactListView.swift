@@ -20,7 +20,7 @@ struct Contact: Identifiable, Codable, Hashable {
     let name: String
     let phoneNumber: String
     
-    // encode(to:) 메서드: 이 메서드는 Encoder를 사용하여 데이터를 인코딩하는 데 사용됩니다. 
+    // encode(to:) 메서드: 이 메서드는 Encoder를 사용하여 데이터를 인코딩하는 데 사용됩니다.
     // encode(to:) 메서드 내에서는 container를 생성하고, 데이터 필드를 CodingKeys를 사용하여 해당 컨테이너에 인코딩합니다.
     // 여기에서 name 및 phoneNumber 필드가 인코딩됩니다
     func encode(to encoder: Encoder) throws {
@@ -47,10 +47,35 @@ struct ContactListView: View {
         NavigationView {
             VStack {
                 if isAddingUser {
-                    ContactPicker()
+                    ContactPicker() // @@@@@@@@@@@@
+                        .accentColor(Color.customColor)
                 } else {
-                    if viewModel.selectedUsers
+                    if viewModel.selectedUsers.count > 0 {
+                        Text("아래의 사용자들에게 현재 나의 위치를\n 문자로 전송합니다.")
+                            .multilineTextAlignment(.center)
+                        List(viewModel.selectedUsers) { user in
+                            Text(user.name)
+                        }
+                    } else {
+                        Text("우측 상단의 추가 버튼을 클릭하여\n 원하는 사람을 선택해주세요 (최대 5명).")
+                            .multilineTextAlignment(.center)
+                    }
                 }
+            }
+            .navigationBarItems(trailing: addButton)
+        }
+    }
+    
+    
+    private var addButton: some View {
+        Group {
+            if !isAddingUser {
+                Button("추가") {
+                    isAddingUser.toggle()
+                }
+                .foregroundColor(Color(red: 249.0/255.0, green: 42.0/255.0, blue: 42.0/255.0, opacity: 0.85))
+            } else {
+                EmptyView()
             }
         }
     }
@@ -59,6 +84,8 @@ struct ContactListView: View {
 // 사용자가 연락처를 선택한 후 호출되며, 선택한 연락처를 가져와서 Contact 객체로 변환한 후 selectedUsers에 추가합니다.
 // 최대 5개까지만 연락처를 추가할 수 있습니다.
 struct ContactPicker: UIViewControllerRepresentable {
+    
+    
     
 }
 

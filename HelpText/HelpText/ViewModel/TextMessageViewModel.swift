@@ -19,12 +19,12 @@ class TextMessageViewModel: ObservableObject {
     
     private let savedText = "savedText"
     
-    func saveTextMessageToUserDefaults(_ newText: String) {
+    func saveTextMessageToUserDefaults(_ newText: String) { // 🔴
         textMessage = newText;
         UserDefaults.standard.set(textMessage, forKey: savedText)
     }
     
-    func loadTextMessageToUserDefaults() {
+    func loadTextMessageToUserDefaults() { // 🔴
         if let savedData = UserDefaults.standard.string(forKey: savedText) {
             textMessage = savedData
         }

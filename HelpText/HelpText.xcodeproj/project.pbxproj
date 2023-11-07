@@ -117,10 +117,10 @@
 		1D801D242AEF3EE900961B39 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				1D801D2F2AEF3FBC00961B39 /* UserDefaultsManager.swift */,
-				1D801D312AEF3FDC00961B39 /* MessageManager.swift */,
-				1D801D332AEF3FF700961B39 /* ContactManager.swift */,
 				1D801D352AEF400D00961B39 /* LocationManager.swift */,
+				1D801D312AEF3FDC00961B39 /* MessageManager.swift */,
+				1D801D2F2AEF3FBC00961B39 /* UserDefaultsManager.swift */,
+				1D801D332AEF3FF700961B39 /* ContactManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -131,9 +131,6 @@
 				1D801D392AEF403000961B39 /* RootView.swift */,
 				1DE869BE2AF3819B00FAA14C /* Home */,
 				1DE869BF2AF381B100FAA14C /* Setting */,
-				1D801D3B2AEF404600961B39 /* ContactListView.swift */,
-				1D801D3F2AEF407100961B39 /* EditTextView.swift */,
-				1D801D412AEF408B00961B39 /* RegisterTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,7 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				1D801D3D2AEF405500961B39 /* SettingView.swift */,
+				1D801D3F2AEF407100961B39 /* EditTextView.swift */,
+				1D801D3B2AEF404600961B39 /* ContactListView.swift */,
 				1D801D472AEF40D700961B39 /* DeveloperInfoView.swift */,
+				1D801D412AEF408B00961B39 /* RegisterTextView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";

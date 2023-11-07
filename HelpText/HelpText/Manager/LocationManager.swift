@@ -28,7 +28,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
     // 위치 업데이트가 발생하면 호출되는 메서드
     // 현재 위치 정보를 가져오고 주소로 변환하는 역할
     // locationManager -> fetchUserLocation 🔴
-    func fetchUserLocation(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func fetchUserLocation(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) { // 🔴
         
         let geocoder = CLGeocoder() // 위치 정보를 주소로 변환
         

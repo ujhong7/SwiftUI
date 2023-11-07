@@ -11,7 +11,7 @@ import MessageUI
 
 class MessageManager: NSObject, MFMessageComposeViewControllerDelegate, ObservableObject {
     
-    func snedSMS(names: [Contact], text: String, location: String, completionHandler: @escaping (Bool) -> Void) {
+    func sendSMS(names: [Contact], text: String, location: String, completionHandler: @escaping (Bool) -> Void) {
         if MFMessageComposeViewController.canSendText() {
             
             let messageVC = MFMessageComposeViewController()
