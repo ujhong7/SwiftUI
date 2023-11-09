@@ -18,6 +18,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
     // 기존의 초기화 동작을 수정하거나 확장하는 데 사용됩니다.
     // 설정 및 위치 업데이트를 시작하는 작업을 수행하기 위해 init 메서드를 재정의
     override init() {
+        super.init()
         locationManager.delegate = self
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest

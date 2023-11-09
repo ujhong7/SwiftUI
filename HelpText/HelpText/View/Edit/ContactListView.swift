@@ -47,7 +47,7 @@ struct ContactListView: View {
         NavigationView {
             VStack {
                 if isAddingUser {
-                    ContactPicker() // @@@@@@@@@@@@
+                    ContactPicker(selectedUsers: $viewModel.selectedUsers, isAddingUser: $isAddingUser)
                         .accentColor(Color.customColor)
                 } else {
                     if viewModel.selectedUsers.count > 0 {
@@ -81,11 +81,61 @@ struct ContactListView: View {
     }
 }
 
-// 사용자가 연락처를 선택한 후 호출되며, 선택한 연락처를 가져와서 Contact 객체로 변환한 후 selectedUsers에 추가합니다.
-// 최대 5개까지만 연락처를 추가할 수 있습니다.
+
+// 연락처 선택 화면을 표시하고 사용자가 연락처를 선택하면
+// 해당 정보를 selectedUsers에 저장하며, isAddingUser 상태를 관리하여 화면을 업데이트합니다.
 struct ContactPicker: UIViewControllerRepresentable {
     
+    @Binding var selectedUsers: [Contact] // 선택된 연락처 정보를 저장하는 배열
+    @Binding var isAddingUser: Bool // 연락처를 추가하고 있는지 여부
     
+    func makeUIViewController(context: Context) -> some UIViewController {
+        let viewController = CNContactPickerViewController()
+        viewController.delegate = context.coordinator
+        return viewController
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(selectedUsers: $selectedUsers, isAddingUser: $isAddingUser)
+    }
+    
+    class Coordinator: NSObject, CNContactPickerDelegate { // 선택된 연락처 정보를 처리
+        
+        @Binding var selectedUsers: [Contact]
+        @Binding var isAddingUser: Bool
+        
+        init(selectedUsers: Binding<[Contact]>, isAddingUser: Binding<Bool>) {
+            _selectedUsers = selectedUsers
+            _isAddingUser = isAddingUser
+        }
+        
+        // 사용자가 연락처를 선택할 때 호출됩니다. 선택된 연락처의 정보를 가져와 Contact 구조체로 변환한 후, selectedUsers 배열에 추가합니다.
+        func contactPicker(_ picker: CNContactPickerViewController, didSelect contacts: [CNContact]) {
+            let newContacts = contacts.map { contact in
+                let name = CNContactFormatter.string(from: contact, style: .fullName) ?? ""
+                let phoneNumber = contact.phoneNumbers.first?.value.stringValue ?? ""
+                return Contact(name: name, phoneNumber: phoneNumber)
+            }
+            
+            let uniqueNewContacts = Array(Set(newContacts))
+            
+            let remainingSpace = 5 - selectedUsers.count
+            let contactsToAdd = min(remainingSpace, uniqueNewContacts.count)
+            
+            selectedUsers += uniqueNewContacts.prefix(contactsToAdd)
+            
+            isAddingUser = false
+        }
+        
+        // 사용자가 연락처 선택을 취소할 때 호출됩니다. 이때 isAddingUser를 false로 설정하여 연락처 선택이 종료됨을 나타냅니다.
+        func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+            isAddingUser = false
+        }
+        
+    }
     
 }
 

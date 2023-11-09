@@ -35,7 +35,7 @@ struct SettingView: View {
                             .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                     }
                     .sheet(isPresented: $isPresentingContactListView, onDismiss: {
-                        
+                        // showAlert = true // ???
                     }, content: {
                         ContactListView(viewModel: contactViewModel)
                     })
@@ -43,9 +43,12 @@ struct SettingView: View {
                 
                 Section(header: Text("등록한 연락처를 초기화 합니다.")) {
                     Button(action: {
+                        print("11")
                         if contactViewModel.selectedUsers.count > 0 {
+                            print("22")
                             showAlert = true
                         } else {
+                            print("33")
                             showAlertForNegativeCount = true
                         }
                     }) {
@@ -69,6 +72,12 @@ struct SettingView: View {
                         dismissButton: .default(Text("확인"))
                     )
                 }
+                
+                
+                
+                // .alert 두개가 공존이 안되는것같음..🔴, 위치정보권한
+                
+                
                 
 //                Section(header: Text("정보와 문의가 필요하다면 이곳을 확인해주세요.")) {
 //                    NavigationLink(destination: DeveloperInfoView()) {

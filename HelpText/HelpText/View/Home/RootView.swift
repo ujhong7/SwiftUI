@@ -21,7 +21,7 @@ struct RootView: View {
                     Image(systemName: "house")
                     Text("홈")
                 }
-            SettingView()
+            SettingView(contactViewModel: contactViewModel, textMessageViewModel: textMessageViewModel)
                 .tabItem {
                     Image(systemName: "gear")
                     Text("설정")

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1D801D162AEF3ECE00961B39 /* HelpTextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D152AEF3ECE00961B39 /* HelpTextApp.swift */; };
-		1D801D182AEF3ECE00961B39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D172AEF3ECE00961B39 /* ContentView.swift */; };
 		1D801D1A2AEF3ECF00961B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D801D192AEF3ECF00961B39 /* Assets.xcassets */; };
 		1D801D1D2AEF3ECF00961B39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D801D1C2AEF3ECF00961B39 /* Preview Assets.xcassets */; };
 		1D801D282AEF3F4F00961B39 /* TextMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D272AEF3F4F00961B39 /* TextMessageViewModel.swift */; };
@@ -24,16 +23,14 @@
 		1D801D3C2AEF404600961B39 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D3B2AEF404600961B39 /* ContactListView.swift */; };
 		1D801D3E2AEF405500961B39 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D3D2AEF405500961B39 /* SettingView.swift */; };
 		1D801D402AEF407100961B39 /* EditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D3F2AEF407100961B39 /* EditTextView.swift */; };
-		1D801D422AEF408B00961B39 /* RegisterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D412AEF408B00961B39 /* RegisterTextView.swift */; };
+		1D801D422AEF408B00961B39 /* HomeRegisterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D412AEF408B00961B39 /* HomeRegisterTextView.swift */; };
 		1D801D442AEF40A800961B39 /* HomeSection2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D432AEF40A800961B39 /* HomeSection2View.swift */; };
 		1D801D462AEF40BF00961B39 /* HomeSection1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D452AEF40BF00961B39 /* HomeSection1View.swift */; };
-		1D801D482AEF40D700961B39 /* DeveloperInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D472AEF40D700961B39 /* DeveloperInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D801D122AEF3ECE00961B39 /* HelpText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D801D152AEF3ECE00961B39 /* HelpTextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTextApp.swift; sourceTree = "<group>"; };
-		1D801D172AEF3ECE00961B39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D801D192AEF3ECF00961B39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D801D1C2AEF3ECF00961B39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D801D272AEF3F4F00961B39 /* TextMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageViewModel.swift; sourceTree = "<group>"; };
@@ -49,10 +46,9 @@
 		1D801D3B2AEF404600961B39 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		1D801D3D2AEF405500961B39 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		1D801D3F2AEF407100961B39 /* EditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextView.swift; sourceTree = "<group>"; };
-		1D801D412AEF408B00961B39 /* RegisterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextView.swift; sourceTree = "<group>"; };
+		1D801D412AEF408B00961B39 /* HomeRegisterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRegisterTextView.swift; sourceTree = "<group>"; };
 		1D801D432AEF40A800961B39 /* HomeSection2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection2View.swift; sourceTree = "<group>"; };
 		1D801D452AEF40BF00961B39 /* HomeSection1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection1View.swift; sourceTree = "<group>"; };
-		1D801D472AEF40D700961B39 /* DeveloperInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +86,6 @@
 				1D801D242AEF3EE900961B39 /* Manager */,
 				1D801D232AEF3EE400961B39 /* Extension */,
 				1D801D152AEF3ECE00961B39 /* HelpTextApp.swift */,
-				1D801D172AEF3ECE00961B39 /* ContentView.swift */,
 				1D801D192AEF3ECF00961B39 /* Assets.xcassets */,
 				1D801D1B2AEF3ECF00961B39 /* Preview Content */,
 			);
@@ -128,9 +123,9 @@
 		1D801D252AEF3EED00961B39 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1D801D392AEF403000961B39 /* RootView.swift */,
 				1DE869BE2AF3819B00FAA14C /* Home */,
 				1DE869BF2AF381B100FAA14C /* Setting */,
+				1DE869C02AFCBC7800FAA14C /* Edit */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,6 +142,7 @@
 		1DE869BE2AF3819B00FAA14C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1D801D392AEF403000961B39 /* RootView.swift */,
 				1D801D372AEF402900961B39 /* HomeView.swift */,
 				1D801D452AEF40BF00961B39 /* HomeSection1View.swift */,
 				1D801D432AEF40A800961B39 /* HomeSection2View.swift */,
@@ -158,12 +154,18 @@
 			isa = PBXGroup;
 			children = (
 				1D801D3D2AEF405500961B39 /* SettingView.swift */,
-				1D801D3F2AEF407100961B39 /* EditTextView.swift */,
-				1D801D3B2AEF404600961B39 /* ContactListView.swift */,
-				1D801D472AEF40D700961B39 /* DeveloperInfoView.swift */,
-				1D801D412AEF408B00961B39 /* RegisterTextView.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		1DE869C02AFCBC7800FAA14C /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				1D801D3F2AEF407100961B39 /* EditTextView.swift */,
+				1D801D3B2AEF404600961B39 /* ContactListView.swift */,
+				1D801D412AEF408B00961B39 /* HomeRegisterTextView.swift */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,14 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D801D182AEF3ECE00961B39 /* ContentView.swift in Sources */,
 				1D801D3C2AEF404600961B39 /* ContactListView.swift in Sources */,
 				1D801D2A2AEF3F6200961B39 /* ContactListViewModel.swift in Sources */,
 				1D801D3E2AEF405500961B39 /* SettingView.swift in Sources */,
 				1D801D362AEF400D00961B39 /* LocationManager.swift in Sources */,
 				1D801D442AEF40A800961B39 /* HomeSection2View.swift in Sources */,
 				1D801D162AEF3ECE00961B39 /* HelpTextApp.swift in Sources */,
-				1D801D422AEF408B00961B39 /* RegisterTextView.swift in Sources */,
+				1D801D422AEF408B00961B39 /* HomeRegisterTextView.swift in Sources */,
 				1D801D302AEF3FBC00961B39 /* UserDefaultsManager.swift in Sources */,
 				1D801D382AEF402900961B39 /* HomeView.swift in Sources */,
 				1D801D2C2AEF3F9A00961B39 /* Color.swift in Sources */,
@@ -254,7 +255,6 @@
 				1D801D2E2AEF3FA700961B39 /* ActionButton.swift in Sources */,
 				1D801D342AEF3FF700961B39 /* ContactManager.swift in Sources */,
 				1D801D322AEF3FDC00961B39 /* MessageManager.swift in Sources */,
-				1D801D482AEF40D700961B39 /* DeveloperInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HelpText/Preview Content\"";
+				DEVELOPMENT_TEAM = 7HTRP53WA3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -416,6 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HelpText/Preview Content\"";
+				DEVELOPMENT_TEAM = 7HTRP53WA3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

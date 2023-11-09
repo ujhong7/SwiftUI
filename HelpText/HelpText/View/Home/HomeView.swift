@@ -25,7 +25,7 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                Image("")
+                Image("SAVEME_ICON")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40, height: 40)

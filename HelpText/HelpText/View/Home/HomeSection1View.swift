@@ -28,7 +28,7 @@ struct HomeSection1View: View {
                 .padding(.leading, 20)
                 .font(.system(size: 25, weight: .bold))
             
-            ActionButton2(title: "클릭하여 바로가기", subtitle: "📍 현재 나의 위치\n☎️ 등록된 번호\n📝 등록된 텍스트\n\n 위를 기반으로 메세지를 만들어 드립니다.") {
+            ActionButton(title: "클릭하여 바로가기", subtitle: "📍 현재 나의 위치\n☎️ 등록된 번호\n📝 등록된 텍스트\n\n 위를 기반으로 메세지를 만들어 드립니다.") {
                 tapActionButton()
             }
         }

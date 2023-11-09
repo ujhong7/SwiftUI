@@ -30,7 +30,8 @@ class ContactListViewModel: ObservableObject {
         }
     }
     
-    // 저장된 선택 사용자를 불러오는 함수입니다. UserDefaults에서 selectedUsersKey 키를 사용하여 저장된 데이터를 가져오고, 이 데이터를 디코딩하여 selectedUsers 배열에 할당합니다.
+    // 저장된 선택 사용자를 불러오는 함수입니다. UserDefaults에서 selectedUsersKey 키를 사용하여 저장된 데이터를 가져오고, 
+    // 이 데이터를 디코딩하여 selectedUsers 배열에 할당합니다.
     private func loadSelectedUsers() {
         if let savedData = UserDefaults.standard.data(forKey: selectedUsersKey) {
             let decoder = JSONDecoder()
